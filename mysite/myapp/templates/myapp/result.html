@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Scraped Links</h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">GSTIN No</th>
+                    <th scope="col">PAN No</th>
+                    <th scope="col">Permanent Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for link in data %}
+                <tr>
+                    <td>{{ link.id }}</td>
+                    <td>{{ link.address }}</td>
+                    <td>{{ link.name }}</td>
+                    <td>{{ link.gstin_no }}</td>
+                    <td>{{ link.pan_no }}</td>
+                    <td>{{ link.permanent_address }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
